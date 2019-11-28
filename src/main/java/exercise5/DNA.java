@@ -127,7 +127,6 @@ public class DNA {
     }
 
     public void mutateCodon(String originalCodon, String newCodon) {
-//        System.out.println("Original sequence: " + this.sequence + " Codon to eliminate: " + originalCodon + " Codon to replace: " + newCodon);
 
         // check to make sure new and old codons are valid
         if (!(isValid(originalCodon) && isValid(newCodon))) {
@@ -140,7 +139,6 @@ public class DNA {
         this.codonArr = toArrayList(this.sequence);
         this.noJunkSequence = noJunk(this.sequence);
         this.mass = totalMass();
-//        System.out.println("New sequence: "+this.sequence);
     }
 
     /*
@@ -208,14 +206,12 @@ public class DNA {
     * @returns sequence with no junk
      */
     public String noJunk(String sequence) {
-//        System.out.println("Removing Junk: " + sequence);
         String noJunk = "";
         for (int i = 0; i < sequence.length(); i++) {
             if (isNucleotide(sequence.charAt(i))) {
                 noJunk += sequence.charAt(i);
             }
         }
-//        System.out.println("Junk removed: " + noJunk);
         return noJunk;
     }
 }
