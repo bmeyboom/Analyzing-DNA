@@ -111,25 +111,6 @@ public class DNA {
     public Set<String> codonSet() {
         System.out.println("Setting codons: " + this.sequence);
         Set<String> cSet = new HashSet<>();
-//        int nCount = 0; // counts number of nucleotides
-//        String codon = ""; // string to create a codon
-//
-//        // iterate through string collecting only the nucleotides and grouping them
-//        for(int i = 0; i < this.sequence.length(); i++) {
-//            // if the current codon is already 3 long, add it to the set and reset
-//            if (nCount == 3) {
-//                nCount -=3;
-//                cSet.add(codon);
-//                codon = "";
-//            } else {
-//                char nucleotide = this.sequence.charAt(i);
-//                // if the character is a nucleotide add it to the current codon
-//                if (isNucleotide(nucleotide)) {
-//                    codon+=(nucleotide);
-//                    nCount++;
-//                }
-//            }
-//        }
         String noJunk = noJunk(this.sequence);
         System.out.println(noJunk);
         for (int i = 0; i < noJunk.length();) {
